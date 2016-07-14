@@ -11,12 +11,13 @@
 	 * real life you probably would be making AJAX calls
 	 */
 	function Store(name, callback) {
+		var data;
 		callback = callback || function () {};
 
 		this._dbName = name;
 
 		if (!localStorage[name]) {
-			var data = {
+			data = {
 				todos: []
 			};
 
